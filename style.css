@@ -135,6 +135,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 50px;
   }
   .todo-item {
     width: 90%;
@@ -164,7 +165,8 @@ body {
     font-weight: 600;
     padding: 10px;
     background-color: #2c3e5069;
-    position: absolute;
+    position: fixed;
+    bottom: 0;
     left: 0;
     width: 100%;
   }
@@ -235,6 +237,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 50px;
   }
   .todo-item {
     width: 50%;
@@ -274,7 +277,8 @@ body {
     font-weight: 600;
     padding: 10px;
     background-color: #2c3e5069;
-    position: absolute;
+    position: fixed;
+    bottom: 0;
     left: 0;
     width: 100%;
   }
