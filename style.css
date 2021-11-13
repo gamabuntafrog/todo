@@ -65,6 +65,7 @@ textarea,
 select {
   font: inherit;
 }
+
 body {
   /* font-family: 'Roboto', sans-serif; */
   font-family: "Source Sans Pro", sans-serif;
@@ -97,9 +98,9 @@ body {
   .create-todo__header {
     margin-bottom: 10px;
   }
-  #head,
-  #desc,
-  #submit {
+  #create-todo__head,
+  #create-todo__desc,
+  #create-todo__submit {
     margin-bottom: 10px;
     font-size: 30px;
     border: none;
@@ -108,36 +109,46 @@ body {
     color: darkslategrey;
     box-shadow: 0px 3px 17px 4px rgba(34, 60, 80, 0.3);
     outline: none;
+    transition: 0.5s;
   }
-  /* #head:focus,
-#desc:focus {
-  border: 3px solid black;
-} */
-  #head:focus {
+
+  #create-todo__head:hover,
+  #create-todo__desc:hover,
+  #create-todo__head:focus,
+  #create-todo__desc:focus {
+    color: azure;
+    background-color: cadetblue;
+    transition: 0.5s;
   }
-  #head {
+
+  #create-todo__submit:hover {
+    color: azure;
+    background-color: cadetblue;
+    transition: 0.5s;
+  }
+  #create-todo__head {
     width: 90%;
   }
-  #desc {
+  #create-todo__desc {
     max-width: 90%;
     max-height: 200px;
     min-width: 90%;
     min-height: 50px;
   }
-  #submit {
+  #create-todo__submit {
     margin-bottom: 0px;
     width: 160px;
   }
   .content {
+    margin-bottom: 50px;
   }
   .content__container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 50px;
   }
-  .todo-item {
+  .content__item {
     width: 90%;
     background-color: azure;
     color: darkslategrey;
@@ -146,20 +157,32 @@ body {
     box-shadow: 0px 3px 17px 4px rgba(34, 60, 80, 0.3);
     border-radius: 4px;
   }
-  .todo-h1 {
+  .content__header {
     word-wrap: break-word;
   }
 
-  .todo-p {
+  .content__header {
     word-wrap: break-word;
   }
-  #todo-delete,
-  #todo-change {
+  #content__delete,
+  #content__change {
     border: none;
     border-radius: 3px;
     background-color: azure;
     color: darkslategrey;
     box-shadow: 0px 3px 17px 4px rgba(34, 60, 80, 0.05);
+    transition: 0.5s;
+  }
+
+  #content__delete:hover {
+    background-color: crimson;
+    color: azure;
+    transition: 0.5s;
+  }
+  #content__change:hover {
+    background-color: cadetblue;
+    color: azure;
+    transition: 0.5s;
   }
   .footer {
     font-weight: 600;
@@ -178,6 +201,39 @@ body {
   .footer__h2 {
     color: azure;
     font-size: 20px;
+  }
+  #modal-wrapper {
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+  }
+
+  #modal__change-head {
+    margin-bottom: 10px;
+  }
+  #modal__change-desc {
+    width: 100%;
+    margin-bottom: 10px;
+    resize: vertical;
+    max-height: 70vh;
+  }
+  #modal__change-submit {
+    margin-bottom: 10px;
+    font-size: 30px;
+    border: none;
+    border-radius: 3px;
+    color: azure;
+    background-color: cadetblue;
+    outline: none;
+    transition: 0.5s;
+  }
+  #modal__change-submit:hover {
+    color: azure;
+    background-color: rgb(85, 154, 201);
+    transition: 0.5s;
   }
 }
 
@@ -198,9 +254,9 @@ body {
     margin-bottom: 10px;
     font-size: 100px;
   }
-  #head,
-  #desc,
-  #submit {
+  #create-todo__head,
+  #create-todo__desc,
+  #create-todo__submit {
     margin-bottom: 10px;
     font-size: 30px;
     border: none;
@@ -209,37 +265,47 @@ body {
     color: darkslategrey;
     box-shadow: 0px 3px 17px 4px rgba(34, 60, 80, 0.3);
     outline: none;
+    transition: 0.5s;
   }
-  /* #head:focus,
-#desc:focus {
-  border: 3px solid black;
-} */
-  #head:focus {
+
+  #create-todo__head:hover,
+  #create-todo__desc:hover,
+  #create-todo__head:focus,
+  #create-todo__desc:focus {
+    color: azure;
+    background-color: cadetblue;
+    transition: 0.5s;
   }
-  #head {
+
+  #create-todo__submit:hover {
+    color: azure;
+    background-color: cadetblue;
+    transition: 0.5s;
+  }
+  #create-todo__head {
     width: 50%;
   }
-  #desc {
+  #create-todo__desc {
     max-width: 50%;
     max-height: 200px;
     min-width: 50%;
     height: 50px;
     min-height: 50px;
   }
-  #submit {
+  #create-todo__submit {
     margin-bottom: 0px;
     width: 160px;
   }
   .content {
+    padding-bottom: 50px;
   }
   .content__container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 50px;
   }
-  .todo-item {
+  .content__item {
     width: 50%;
     background-color: azure;
     color: darkslategrey;
@@ -248,15 +314,15 @@ body {
     box-shadow: 0px 3px 17px 4px rgba(34, 60, 80, 0.3);
     border-radius: 4px;
   }
-  .todo-h1 {
+  .content__header {
     word-wrap: break-word;
   }
 
-  .todo-p {
+  .content__header {
     word-wrap: break-word;
   }
-  #todo-delete,
-  #todo-change {
+  #content__delete,
+  #content__change {
     border: none;
     border-radius: 3px;
     background-color: azure;
@@ -265,12 +331,14 @@ body {
 
     transition: 0.5s;
   }
-  #todo-delete:hover {
+  #content__delete:hover {
     background-color: crimson;
+    color: azure;
     transition: 0.5s;
   }
-  #todo-change:hover {
+  #content__change:hover {
     background-color: cadetblue;
+    color: azure;
     transition: 0.5s;
   }
   .footer {
@@ -291,6 +359,46 @@ body {
     color: azure;
     font-size: 20px;
   }
+  #modal-wrapper {
+    width: 30%;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #modal__change-head {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+  }
+  #modal__change-desc {
+    width: 100%;
+    margin-bottom: 10px;
+    resize: vertical;
+    height: 20vh;
+    max-height: 70vh;
+
+    border-radius: 4px;
+  }
+  #modal__change-submit {
+    margin-bottom: 10px;
+    font-size: 30px;
+    border: none;
+    border-radius: 3px;
+    color: azure;
+    background-color: cadetblue;
+    outline: none;
+    transition: 0.5s;
+  }
+  #modal__change-submit:hover {
+    color: azure;
+    background-color: rgb(85, 154, 201);
+    transition: 0.5s;
+  }
 }
 
 #backdrop {
@@ -305,11 +413,14 @@ body {
   align-items: center;
 }
 
-#modal-wrapper {
-  padding: 20px;
-  background-color: white;
-  display: flex;
-  align-items: center;
-
-  flex-direction: column;
+#create-todo__head::placeholder,
+#create-todo__desc::placeholder {
+  transition: 1s;
+}
+#create-todo__head:hover::placeholder,
+#create-todo__desc:hover::placeholder,
+#create-todo__head:focus::placeholder,
+#create-todo__desc:focus::placeholder {
+  color: azure;
+  transition: 1s;
 }
